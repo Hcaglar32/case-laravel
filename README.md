@@ -32,7 +32,7 @@ Laravel serves product data from the `storage/app/data.json` file through an API
 
 2. **Laravel Kurulumunu Yapın** / Install Laravel:
     ```bash
-    cd laravel-backend
+    cd bulutSistemCase-Laravel
     composer install
     ```
 
