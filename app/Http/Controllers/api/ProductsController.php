@@ -3,22 +3,22 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Http;
 
 class ProductsController extends Controller {
 
     public function index() {
-        $path = storage_path('app/data.json');
+        $url = 'https://raw.githubusercontent.com/hcaglar32/case-laravel/main/storage/app/data.json';
 
-        if (!File::exists($path)) {
+        $response = Http::get($url);
+
+        if ($response->failed()) {
             return response()->json([
-                'error' => 'Dosya bulunamadı.'
+                'error' => 'Dosya alınamadı.'
             ], 404);
         }
 
-        $json = File::get($path);
-        $data = json_decode($json, true);
+        $data = $response->json();
 
         return response()->json([
             'data' => $data
