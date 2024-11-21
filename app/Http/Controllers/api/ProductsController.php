@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Http;
 class ProductsController extends Controller {
 
     public function index() {
-        $url = 'https://raw.githubusercontent.com/hcaglar32/case-laravel/main/storage/app/data.json';
+        $path = storage_path('./data.json');
 
-        $response = Http::get($url);
+        $response = Http::get($path);
 
         if ($response->failed()) {
             return response()->json([
