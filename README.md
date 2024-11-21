@@ -26,13 +26,13 @@ Laravel serves product data from the `storage/app/data.json` file through an API
 
 1. **Depoyu Klonlayın** / Clone the Repository:
     ```bash
-    git clone https://github.com/kendi-username/bulutSistemCase-Laravel.git
-    cd bulutSistemCase-Laravel
+    git clone https://github.com/kendi-username/case-laravel.git
+    cd case-laravel
     ```
 
 2. **Laravel Kurulumunu Yapın** / Install Laravel:
     ```bash
-    cd bulutSistemCase-Laravel
+    cd case-laravel
     composer install
     ```
 
